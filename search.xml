@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>策略模式</title>
+      <link href="/2020/04/19/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2020/04/19/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h3 id="策略设计模式"><a href="#策略设计模式" class="headerlink" title="策略设计模式"></a>策略设计模式</h3><p><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2120226991,4230744473&fm=26&gp=0.jpg" alt="图解"></p><a id="more"></a><h3 id="按照不同类型，调用不同的sdk"><a href="#按照不同类型，调用不同的sdk" class="headerlink" title="按照不同类型，调用不同的sdk"></a>按照不同类型，调用不同的sdk</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: 程序员小吴</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 购物车</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@CreateDate</span>: 2019/10/27</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShopCart</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ShopCart</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pay</span><span class="params">(String payType)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (Constant.WEIXIN_PAY.equals(payType)) &#123;</span><br><span class="line">            <span class="comment">//调用微信支付SDK</span></span><br><span class="line">            System.out.println(<span class="string">"您选择的微信支付"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (Constant.ALI_PAY.equals(payType)) &#123;</span><br><span class="line">            <span class="comment">//调用支付宝支付SDK</span></span><br><span class="line">            System.out.println(<span class="string">"您选择的支付宝支付"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (Constant.WEIXIN_FRIEND_PAY.equals(payType)) &#123;</span><br><span class="line">            <span class="comment">//调用微信好友支付SDK</span></span><br><span class="line">            System.out.println(<span class="string">"您选择的找微信好友支付"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (Constant.QQ_PAY.equals(payType)) &#123;</span><br><span class="line">            <span class="comment">//调用QQ支付SDK</span></span><br><span class="line">            System.out.println(<span class="string">"您选择的QQ钱包支付"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"您选择的支付方式暂未开通"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><ul><li>很明显存在三个问题：<ul><li>如果要新增支付方式，需要修改购物车的pay方法，就很有可能引入问题，不符合修改关闭，对扩展开发的原则。</li><li>如果某个第三方接口更改了，你同样需要修改购物车的pay方法，我们应该针对接口编程，而不是针对实现编程。</li><li>随着支付方式越来越多，这么多层的if/else的条件判断如何规避。</li></ul></li></ul><h3 id="解决方法-就是使用策略模式"><a href="#解决方法-就是使用策略模式" class="headerlink" title="解决方法-就是使用策略模式"></a>解决方法-就是使用策略模式</h3><p><code>策略模式</code>：定义了算法簇，分别封装起来，让他们之间可以互相替换，此模式让算法的变化独立于使用算法的客户。</p><p><code>我理解的策略模式</code>：</p><h3 id="策略模式的优点"><a href="#策略模式的优点" class="headerlink" title="策略模式的优点"></a>策略模式的优点</h3><p>（1）策略模式提供了管理相关的算法族的办法。策略类的等级结构定义了一个算法或行为族。恰当使用继承可以把公共的代码移到父类里面，从而避免代码重复。<br>（2）使用策略模式可以避免使用多重条件(if-else)语句。多重条件语句不易维护，它把采取哪一种算法或采取哪一种行为的逻辑与算法或行为的逻辑混合在一起，统统列在一个多重条件语句里面，比使用继承的办法还要原始和落后</p><h3 id="策略模式的缺点"><a href="#策略模式的缺点" class="headerlink" title="策略模式的缺点"></a>策略模式的缺点</h3><p>（1）客户端必须知道所有的策略类，并自行决定使用哪一个策略类。这就意味着客户端必须理解这些算法的区别，以便适时选择恰当的算法类。换言之，策略模式只适用于客户端知道算法或行为的情况。<br>（2）由于策略模式把每个具体的策略实现都单独封装成为类，如果备选的策略很多的话，那么对象的数目就会很可观。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JAVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTTP协议中PUT和POST使用区别</title>
+      <link href="/2020/04/18/HTTP%E5%8D%8F%E8%AE%AE%E4%B8%ADPUT%E5%92%8CPOST%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%88%AB/"/>
+      <url>/2020/04/18/HTTP%E5%8D%8F%E8%AE%AE%E4%B8%ADPUT%E5%92%8CPOST%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%88%AB/</url>
+      
+        <content type="html"><![CDATA[<h3 id="HTTP-幂等方法"><a href="#HTTP-幂等方法" class="headerlink" title="HTTP 幂等方法"></a>HTTP 幂等方法</h3><ul><li>HTTP/1.1 定义：一次或者多次请求某一个资源的本身应该具有同样的结果（网络超时问题除外），也就是说，<strong>其任意多次执行对资源本身所产生的影响均与一次执行的影响相同</strong>。</li><li>这里需要关注几个重点：</li></ul><a id="more"></a><pre><code>+ 幂等不仅仅只是一次（或多次）请求对资源没有副作用（比如查询数据库操作，没有增删改，因此没有对数据库有任何影响）。+ 幂等还包括第一次请求的时候对资源产生了副作用，但是以后的多次请求都不会再对资源产生副作用。+ 幂等关注的是以后的多次请求是否对资源产生的副作用，而不关注结果。+网络超时等问题，不是幂等的讨论范围。</code></pre><table><thead><tr><th>方法</th><th align="center">GET</th><th align="center">POST</th><th align="center">PUT</th><th align="center">DELETE</th><th align="center">PATCH</th></tr></thead><tbody><tr><td>是否幂等性</td><td align="center">√</td><td align="center">×</td><td align="center">√</td><td align="center">√</td><td align="center">×</td></tr></tbody></table><h4 id="1-GET"><a href="#1-GET" class="headerlink" title="1. GET"></a>1. <code>GET</code></h4><p>用于获取资源，不管调用多少次接口，结果都不会改变，所以是幂等的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">只是查询数据，不会影响到资源的变化，因此我们认为它幂等</span><br></pre></td></tr></table></figure><h4 id="2-POST"><a href="#2-POST" class="headerlink" title="2. POST"></a>2. <code>POST</code></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">方法是一个非幂等方法，因为调用多次，都将产生新的资源。因为它会对资源本身产生影响，每次调用都会有新的资源产生，因此不满足幂等性。</span><br></pre></td></tr></table></figure><h4 id="3-PUT"><a href="#3-PUT" class="headerlink" title="3. PUT"></a>3. <code>PUT</code></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">因为它直接把实体部分的数据替换到服务器的资源，我们多次调用它，只会产生一次影响，但是有相同结果的 HTTP 方法，所以满足幂等性。</span><br></pre></td></tr></table></figure><h4 id="4-DELETE"><a href="#4-DELETE" class="headerlink" title="4. DELETE"></a>4. <code>DELETE</code></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">调用一次和多次对资源产生影响是相同的，所以也满足幂等性。</span><br></pre></td></tr></table></figure><h3 id="什么情况下需要幂等"><a href="#什么情况下需要幂等" class="headerlink" title="什么情况下需要幂等"></a>什么情况下需要幂等</h3><p>业务开发中，经常会遇到重复提交的情况，无论是由于网络问题无法收到请求结果而重新发起请求，或是前端的操作抖动而造成重复提交情况。 在交易系统，支付系统这种重复提交造成的问题有尤其明显，比如：</p><ul><li>用户在APP上连续点击了多次提交订单，后台应该只产生一个订单；</li><li>向支付宝发起支付请求，由于网络问题或系统BUG重发，支付宝应该只扣一次钱。 很显然，声明幂等的服务认为，外部调用者会存在多次调用的情况，为了防止外部多次调用对系统数据状态的发生多次改变，将服务设计成幂等。</li></ul><h3 id="HTTP-POST-vs-HTTP-PUT"><a href="#HTTP-POST-vs-HTTP-PUT" class="headerlink" title="HTTP POST vs HTTP PUT"></a>HTTP POST vs HTTP PUT</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> JAVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTTP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
