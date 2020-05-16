@@ -5,9 +5,9 @@
   <subtitle>记录学习中的点点滴滴</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://wuzhixaun.github.io/"/>
+  <link href="https://wuzx.fun/"/>
   <updated>2020-05-14T15:49:58.905Z</updated>
-  <id>https://wuzhixaun.github.io/</id>
+  <id>https://wuzx.fun/</id>
   
   <author>
     <name>Jack Wu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>多线程之原子类</title>
-    <link href="https://wuzhixaun.github.io/2020/05/07/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B9%8B%E5%8E%9F%E5%AD%90%E7%B1%BB/"/>
-    <id>https://wuzhixaun.github.io/2020/05/07/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B9%8B%E5%8E%9F%E5%AD%90%E7%B1%BB/</id>
+    <link href="https://wuzx.fun/2020/05/07/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B9%8B%E5%8E%9F%E5%AD%90%E7%B1%BB/"/>
+    <id>https://wuzx.fun/2020/05/07/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B9%8B%E5%8E%9F%E5%AD%90%E7%B1%BB/</id>
     <published>2020-05-07T15:08:49.000Z</published>
     <updated>2020-05-14T15:49:58.905Z</updated>
     
@@ -35,17 +35,17 @@
     </summary>
     
     
-      <category term="JAVA" scheme="https://wuzhixaun.github.io/categories/JAVA/"/>
+      <category term="JAVA" scheme="https://wuzx.fun/categories/JAVA/"/>
     
     
-      <category term="多线程" scheme="https://wuzhixaun.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="https://wuzx.fun/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>多线程只Lock源码解读</title>
-    <link href="https://wuzhixaun.github.io/2020/05/07/AbstractQueuedSynchronizer%E6%B5%85%E6%9E%90/"/>
-    <id>https://wuzhixaun.github.io/2020/05/07/AbstractQueuedSynchronizer%E6%B5%85%E6%9E%90/</id>
+    <link href="https://wuzx.fun/2020/05/07/AbstractQueuedSynchronizer%E6%B5%85%E6%9E%90/"/>
+    <id>https://wuzx.fun/2020/05/07/AbstractQueuedSynchronizer%E6%B5%85%E6%9E%90/</id>
     <published>2020-05-07T15:08:49.000Z</published>
     <updated>2020-05-14T14:32:02.259Z</updated>
     
@@ -62,17 +62,17 @@
     </summary>
     
     
-      <category term="JAVA" scheme="https://wuzhixaun.github.io/categories/JAVA/"/>
+      <category term="JAVA" scheme="https://wuzx.fun/categories/JAVA/"/>
     
     
-      <category term="多线程" scheme="https://wuzhixaun.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="https://wuzx.fun/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>JAVA如何优雅遍历list</title>
-    <link href="https://wuzhixaun.github.io/2020/04/22/JAVA%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E9%81%8D%E5%8E%86list/"/>
-    <id>https://wuzhixaun.github.io/2020/04/22/JAVA%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E9%81%8D%E5%8E%86list/</id>
+    <link href="https://wuzx.fun/2020/04/22/JAVA%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E9%81%8D%E5%8E%86list/"/>
+    <id>https://wuzx.fun/2020/04/22/JAVA%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E9%81%8D%E5%8E%86list/</id>
     <published>2020-04-21T16:05:19.000Z</published>
     <updated>2020-04-21T16:16:37.751Z</updated>
     
@@ -91,21 +91,21 @@
     </summary>
     
     
-      <category term="JAVA" scheme="https://wuzhixaun.github.io/categories/JAVA/"/>
+      <category term="JAVA" scheme="https://wuzx.fun/categories/JAVA/"/>
     
     
-      <category term="List" scheme="https://wuzhixaun.github.io/tags/List/"/>
+      <category term="List" scheme="https://wuzx.fun/tags/List/"/>
     
-      <category term="Lambda" scheme="https://wuzhixaun.github.io/tags/Lambda/"/>
+      <category term="Lambda" scheme="https://wuzx.fun/tags/Lambda/"/>
     
-      <category term="Stream" scheme="https://wuzhixaun.github.io/tags/Stream/"/>
+      <category term="Stream" scheme="https://wuzx.fun/tags/Stream/"/>
     
   </entry>
   
   <entry>
     <title>策略模式</title>
-    <link href="https://wuzhixaun.github.io/2020/04/19/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://wuzhixaun.github.io/2020/04/19/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</id>
+    <link href="https://wuzx.fun/2020/04/19/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://wuzx.fun/2020/04/19/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</id>
     <published>2020-04-18T17:06:20.000Z</published>
     <updated>2020-04-18T20:03:28.229Z</updated>
     
@@ -118,17 +118,17 @@
     </summary>
     
     
-      <category term="JAVA" scheme="https://wuzhixaun.github.io/categories/JAVA/"/>
+      <category term="JAVA" scheme="https://wuzx.fun/categories/JAVA/"/>
     
     
-      <category term="设计模式" scheme="https://wuzhixaun.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="https://wuzx.fun/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>HTTP协议中PUT和POST使用区别</title>
-    <link href="https://wuzhixaun.github.io/2020/04/18/HTTP%E5%8D%8F%E8%AE%AE%E4%B8%ADPUT%E5%92%8CPOST%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%88%AB/"/>
-    <id>https://wuzhixaun.github.io/2020/04/18/HTTP%E5%8D%8F%E8%AE%AE%E4%B8%ADPUT%E5%92%8CPOST%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%88%AB/</id>
+    <link href="https://wuzx.fun/2020/04/18/HTTP%E5%8D%8F%E8%AE%AE%E4%B8%ADPUT%E5%92%8CPOST%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%88%AB/"/>
+    <id>https://wuzx.fun/2020/04/18/HTTP%E5%8D%8F%E8%AE%AE%E4%B8%ADPUT%E5%92%8CPOST%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%88%AB/</id>
     <published>2020-04-18T12:33:09.000Z</published>
     <updated>2020-04-18T17:15:07.450Z</updated>
     
@@ -144,10 +144,10 @@
     </summary>
     
     
-      <category term="JAVA" scheme="https://wuzhixaun.github.io/categories/JAVA/"/>
+      <category term="JAVA" scheme="https://wuzx.fun/categories/JAVA/"/>
     
     
-      <category term="HTTP" scheme="https://wuzhixaun.github.io/tags/HTTP/"/>
+      <category term="HTTP" scheme="https://wuzx.fun/tags/HTTP/"/>
     
   </entry>
   
