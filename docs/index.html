@@ -16,6 +16,7 @@
   <!-- alert -->
   <link rel="stylesheet" href="//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
 
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 
 <body background="" style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed;">
@@ -51,8 +52,8 @@
       },//增加搜索框
 
       footer: {
-        copy: 'Copyright &copy; 2021 💖 </span>',
-        auth: ' <strong>-相依-</strong>',
+        copy: 'Copyright &copy; 2023 💖 </span>',
+        auth: ' <strong>-小吴的日志-</strong>',
         pre: '<hr/>',
         style: 'text-align: center;',
       },
@@ -68,7 +69,20 @@
       }
    
     }
+
+    const gitalk = new Gitalk({
+        clientID: '7048b10d17b3a702e5a6',
+        clientSecret: '746121571d1600346d3796d95f16e2d1b473af2b',
+        repo: 'blog-comment',
+        owner: 'wuzhixaun',
+        admin: ['wuzhixaun'],
+        // facebook-like distraction free mode
+        distractionFreeMode: false
+    })
   </script>
+
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 
