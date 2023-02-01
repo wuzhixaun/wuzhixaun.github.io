@@ -124,7 +124,7 @@
           admin: ['wuzhixaun'],
           // facebook-like distraction free mode
           distractionFreeMode: false,
-          id: decodeURI(window.location.pathname)
+          id: window.location.pathname + (window.location.hash.split("/")[1]?window.location.hash.split("/")[1]:"")
       })
   </script>
   <!-- PWA 离线化 -->
