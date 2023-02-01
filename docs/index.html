@@ -115,6 +115,9 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <!-- md5 -->
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
   <script>
       const gitalk = new Gitalk({
           clientID: '7048b10d17b3a702e5a6',
@@ -124,7 +127,7 @@
           admin: ['wuzhixaun'],
           // facebook-like distraction free mode
           distractionFreeMode: false,
-          id: MD5(decodeURI(window.location.href))
+          id: md5(decodeURI(window.location.href)),
       })
   </script>
   <!-- PWA 离线化 -->
@@ -150,7 +153,5 @@
 
   <!-- 图片缩放 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.js"></script>
-
-
 </body>
 </html>
