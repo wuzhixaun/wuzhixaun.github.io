@@ -115,6 +115,8 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <!-- md5 -->
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
 
   <script>
       const gitalk = new Gitalk({
@@ -125,7 +127,7 @@
           admin: ['wuzhixaun'],
           // facebook-like distraction free mode
           distractionFreeMode: false,
-          id: window.location.href,
+          id: md5(window.location.href),
       })
   </script>
   <!-- PWA 离线化 -->
